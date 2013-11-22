@@ -1,3 +1,21 @@
+# Overview
+
+  strgMethods is a string method library designed for the usage with mangosta.
+
+# Installation
+
+# User Guide
+```javascript
+  Strg = require('strgMethods');
+  strg = new Strg(value, sequence);
+  
+  strg.len().value // if in string '$len(num)' replace it with a random string of num chars
+  strg.intv().value // if in string '$intv(num)' replace it with the given sequence multiplied buy num
+  strg.seq().value // if in string '$seq' replace it with the sequence provided
+
+  // you return the string by adding a .value to the end of the chain
+  // you can chain the methods or run all on the value by strg.all(). you dont need to add a .value to the end
+```
 # License
 
 (The MIT License)
