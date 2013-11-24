@@ -23,6 +23,14 @@ strgMethods.prototype.seq = function () {
   return this;
 }
 
+strgMethods.prototype.toInt = function () {
+  if ('string' == typeof this.value && this.value.match(/\$toInt/)) {
+    this.value = this.value.replace('$toInt', '');
+    this.value = parseInt(this.value)
+  }
+  return this;
+}
+
 strgMethods.prototype.intv = function () {
   var isIntv, intv;
   regExp = /\$intv\(([^)]+)\)/;

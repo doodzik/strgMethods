@@ -15,6 +15,12 @@ describe("strgMethods", function() {
     Strg = new strgMethods("22$seqnanan", 39);
     Strg.seq().value.should.be.equal("2239nanan");
   });
+  it("$toInt", function() {
+    var Strg;
+    Strg = new strgMethods("22$seq $toInt", 1);
+    Strg.seq().toInt().value;
+    Strg.value.should.equal(221);
+  });
   it("$intv", function() {
     var Strg;
     Strg = new strgMethods("$intv(2)", 40);
